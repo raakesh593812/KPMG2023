@@ -1,0 +1,7 @@
+if you execute the test script below output expected.
+
+command : python test.py
+
+output:
+Value for object{'x': {'y': {'z': 'a'}}}and key x/y/z is : a
+Value for object{'a': {'b': {'c': 'd'}}}and key a/b/c is : d
