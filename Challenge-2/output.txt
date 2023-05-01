@@ -1,0 +1,84 @@
+example 1:
+PS /home/ramakrishna> ./test.ps1 -uri "https://management.azure.com/subscriptions/xxxx-xx-45f0-9efa-9e38d2d8358e" -apiver "2020-01-01"                                                                                                {   
+  "id": "/subscriptions/xxxx-xx-45f0-9efa-9e38d2d8358e",
+  "authorizationSource": "Legacy",
+  "managedByTenants": [],
+  "subscriptionId": "xxxx-xx-45f0-9efa-9e38d2d8358e",
+  "tenantId": "e0793d39-0939-496d-b129-198edd916feb",
+  "displayName": "Visual Studio Professional Subscription",
+  "state": "Enabled",
+  "subscriptionPolicies": {
+    "locationPlacementId": "PublicAndIndia_2015-09-01",
+    "quotaId": "MSDN_2014-09-01",
+    "spendingLimit": "On"
+  }
+}
+
+
+example2:
+PS /home/ramakrishna> ./test.ps1 -uri "https://management.azure.com//subscriptions/xxxx-xx-45f0-9efa-9e38d2d8358e/resourceGroups/cloud-shell-storage-centralindia" -apiver "2020-01-01"
+{
+  "id": "/subscriptions/xxxx-xx-45f0-9efa-9e38d2d8358e/resourceGroups/cloud-shell-storage-centralindia",
+  "name": "cloud-shell-storage-centralindia",
+  "type": "Microsoft.Resources/resourceGroups",
+  "location": "centralindia",
+  "properties": {
+    "provisioningState": "Succeeded"
+  }
+}
+
+example3:
+./test.ps1 -uri "https://management.azure.com//subscriptions/xxxx-xx-45f0-9efa-9e38d2d8358e/resourceGroups/cloud-shell-storage-centralindia/providers/Microsoft.Storage/storageAccounts/csg100300009f52f5f3" -apiver "2023-01-01"
+WARNING: Resulting JSON is truncated as serialization has exceeded the set depth of 2.
+{
+  "sku": {
+    "name": "Standard_LRS",
+    "tier": "Standard"
+  },
+  "kind": "StorageV2",
+  "id": "/subscriptions/xxxx-xx-45f0-9efa-9e38d2d8358e/resourceGroups/cloud-shell-storage-centralindia/providers/Microsoft.Storage/storageAccounts/csg100300009f52f5f3",
+  "name": "csg100300009f52f5f3",
+  "type": "Microsoft.Storage/storageAccounts",
+  "location": "centralindia",
+  "tags": {
+    "ms-resource-usage": "azure-cloud-shell"
+  },
+  "properties": {
+    "defaultToOAuthAuthentication": false,
+    "publicNetworkAccess": "Enabled",
+    "keyCreationTime": {
+      "key1": "2022-11-01T17:43:27.4094918Z",
+      "key2": "2022-11-01T17:43:27.4094918Z"
+    },
+    "privateEndpointConnections": [],
+    "minimumTlsVersion": "TLS1_2",
+    "allowBlobPublicAccess": true,
+    "allowSharedKeyAccess": true,
+    "networkAcls": {
+      "ipv6Rules": "",
+      "resourceAccessRules": "",
+      "bypass": "AzureServices",
+      "virtualNetworkRules": "",
+      "ipRules": "",
+      "defaultAction": "Allow"
+    },
+    "supportsHttpsTrafficOnly": true,
+    "encryption": {
+      "services": "@{file=; blob=}",
+      "keySource": "Microsoft.Storage"
+    },
+    "accessTier": "Hot",
+    "provisioningState": "Succeeded",
+    "creationTime": "2022-11-01T17:43:27.3469553Z",
+    "primaryEndpoints": {
+      "dfs": "https://csg100300009f52f5f3.dfs.core.windows.net/",
+      "web": "https://csg100300009f52f5f3.z29.web.core.windows.net/",
+      "blob": "https://csg100300009f52f5f3.blob.core.windows.net/",
+      "queue": "https://csg100300009f52f5f3.queue.core.windows.net/",
+      "table": "https://csg100300009f52f5f3.table.core.windows.net/",
+      "file": "https://csg100300009f52f5f3.file.core.windows.net/"
+    },
+    "primaryLocation": "centralindia",
+    "statusOfPrimary": "available"
+  }
+}
