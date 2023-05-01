@@ -11,3 +11,8 @@ Hints
 · Aws Documentation (https://docs.aws.amazon.com/)
 · Azure Documentation (https://docs.microsoft.com/en-us/azure/?product=featured)
 · Google Documentation (https://cloud.google.com/docs)
+
+
+
+https://learn.microsoft.com/en-us/azure/virtual-machines/instance-metadata-service?tabs=linux
+This metadata option is only limited to Azure vm
